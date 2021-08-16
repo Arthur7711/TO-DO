@@ -1,0 +1,14 @@
+.done {
+  cursor: pointer;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+/* .todo {
+  text-decoration: none;
+}
+.todo-selected {
+  text-decoration: line-through;
+} */
