@@ -28,37 +28,45 @@ export default function Todo() {
   };
 
   return (
-    <div>
-      <input
-        value={value}
-        type="text"
-        placeholder="todo..."
-        onChange={checkValue}
-      />
-      <button onClick={addDodoList}>click</button>
-      <div className>
-        {data.map((d) => (
-          <p
-            style={
-              isSelected === false
-                ? { textDecoration: "none" }
-                : { textDecoration: "line-through" }
-            }
-            // className={classNames("todo", {
-            //   "todo-selected": isSelected,
-            // })}
-            key={d.id}
-          >
-            {d.value}
-            <span onClick={() => onSelectHendler(d.id)} className={styles.done}>
-              ✅
-            </span>
+    <div className={styles.todoProgram}>
+      <div className={styles.todoMain}>
+        <input
+          value={value}
+          type="text"
+          placeholder="todo..."
+          onChange={checkValue}
+        />
+        <button onClick={addDodoList}>click</button>
+        <div className>
+          {data.map((d) => (
+            <p
+              style={
+                isSelected === false
+                  ? { textDecoration: "none" }
+                  : { textDecoration: "line-through" }
+              }
+              // className={classNames("todo", {
+              //   "todo-selected": isSelected,
+              // })}
+              key={d.id}
+            >
+              {d.value}
+              <span
+                onClick={() => onSelectHendler(d.id)}
+                className={styles.done}
+              >
+                ✅
+              </span>
 
-            <span onClick={() => deletHendler(d.id)} className={styles.delete}>
-              ❌
-            </span>
-          </p>
-        ))}
+              <span
+                onClick={() => deletHendler(d.id)}
+                className={styles.delete}
+              >
+                ❌
+              </span>
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

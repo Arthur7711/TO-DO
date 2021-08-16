@@ -1,3 +1,14 @@
+.todoProgram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.todoMain {
+  padding: 15px;
+  min-height: 200px;
+  background-color: #f4f4f4;
+}
 .done {
   cursor: pointer;
 }
